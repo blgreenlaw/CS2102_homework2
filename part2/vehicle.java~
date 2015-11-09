@@ -1,0 +1,57 @@
+class vehicle {
+  int seats;
+  int mileage;
+  int baseHourlyRate;
+  
+  int rentalCost(int numHours) {
+    return numHours * this.baseHourlyRate;
+  }
+}
+
+class luxury {
+  int premiumPrice;
+}
+
+class Rickshaw extends vehicle {
+  Rickshaw(int seats, int mileage, int baseHourlyRate) {
+    super(seats, mileage, baseHourlyRate);
+  }
+ 
+}
+
+class SchoolBus extends vehicle {
+  String color;
+  SchoolBus (int seats, int mileage,int baseHourlyRate, String color) {
+  super(seats, mileage, baseHourlyRate);
+   this.color =  color;
+  }
+  boolean NeedsOilChange() {
+    return (this.mileage > 6000);
+  }
+}
+
+class Limo extends vehicle, luxury {
+  boolean hasDiscoLights;
+  Limo (int seats, int mileage, int baseHourlyRate, boolean hasDiscoLights) {
+    super(seats, mileage, baseHourlyRate);
+    this.hasDiscoLights = hasDiscoLights;
+  // luxury vehicles incur a higher hourly rate, raised by premium rate
+  int hourlyCost() {
+    this.premiumprice + this.baseHourlyRate; 
+  }
+  
+  boolean NeedsOilChange() {
+    return (this.mileage > 3000);
+  }
+  
+}
+
+class Unicycle extends vehicle {
+  Unicycle(int seats, int mileage) {
+    super(seats, mileage);
+  }
+  
+  boolean NeedsOilChange() {
+    return false;
+  }
+}

@@ -1,0 +1,6 @@
+1. We wanted a class hierarchy that could use methods, but did not have to implement the methods, so we used abstract classes instead of interfaces and classes. We used abstract class for Vehicle and Luxury for this reason. We decided that the other classes should be just classes that extend Vehicle, except for Limo that extends the abstract class Luxury (which also extends Vehicle).
+
+2. We used an abstract class, so that the new classes that extend our abstract classes do not necessarily need to use the methods in the abstract classes. This can be added to in the future because the methods are not limited to only classes that use all of them.
+
+
+Brianna Greenlaw and Courtney Davis
